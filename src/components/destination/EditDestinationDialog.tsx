@@ -75,13 +75,16 @@ const EditDestinationDialog = ({ destination }: { destination: IDestination }) =
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger asChild>
-        <Button variant="outline">
+      <DialogTrigger>
+        <Button variant="outline" type="button">
           <Pencil className="size-4 mr-2" />
           Edit
         </Button>
       </DialogTrigger>
       <DialogContent className="max-w-xl max-h-[90vh] overflow-y-auto">
+   
+        
+        
         <DialogHeader>
           <DialogTitle>Edit Destination</DialogTitle>
           <DialogDescription>

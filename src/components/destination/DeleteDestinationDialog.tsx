@@ -50,9 +50,11 @@ const DeleteDestinationDialog = ({ id }: { id: string }) => {
   return (
     <div>
       <AlertDialog>
-        <AlertDialogTrigger asChild>
+        {/* ✅ Removed asChild entirely to fix the TypeScript build error */}
+        <AlertDialogTrigger>
           <Button
             variant="outline"
+            type="button"
             className="border-destructive/30 bg-background text-destructive hover:bg-destructive/5 hover:text-destructive"
           >
             <Trash2 className="size-4 mr-2" />
